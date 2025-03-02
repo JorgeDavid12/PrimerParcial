@@ -67,19 +67,19 @@ namespace CapaDatos
             return vContarRegistrosAfectados;
         }
 
-        //public int CP_mtdEliminarEs(int codigo)
-        //{
-        //    int vCantidadRegistrosEliminados = 0;
+        public int CP_mtdEliminarEmp(int codigo)
+        {
+            int vCantidadRegistrosEliminados = 0;
 
-        //    string vUspEliminarEs = "uspDeleteEstudiante";
-        //    SqlCommand commEliminarEs = new SqlCommand(vUspEliminarEs, conexion.MtdAbrirConexion());
-        //    commEliminarEs.CommandType = CommandType.StoredProcedure;
+            string vUspEliminarEmp = "uspDeleteEmpleados";
+            SqlCommand commEliminarEmp = new SqlCommand(vUspEliminarEmp, conexion.MtdAbrirConexion());
+            commEliminarEmp.CommandType = CommandType.StoredProcedure;
 
-        //    commEliminarEs.Parameters.AddWithValue("@EstudianteID", codigo);
+            commEliminarEmp.Parameters.AddWithValue("@EmpleadoID", codigo);
 
-        //    vCantidadRegistrosEliminados = commEliminarEs.ExecuteNonQuery();
-        //    conexion.MtdCerrarConexion();
-        //    return vCantidadRegistrosEliminados;
-        //}
+            vCantidadRegistrosEliminados = commEliminarEmp.ExecuteNonQuery();
+            conexion.MtdCerrarConexion();
+            return vCantidadRegistrosEliminados;
+        }
     }
 }

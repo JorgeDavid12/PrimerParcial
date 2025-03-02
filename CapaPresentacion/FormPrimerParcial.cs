@@ -27,6 +27,26 @@ namespace CapaPresentacion
             dgvEmpleado.DataSource = dtMostrarEmp;
         }
 
+        private void mtdLimpiarTextBoxes(Control parent)
+        {
+            foreach (Control c in parent.Controls)
+            {
+                if (c is TextBox)
+                {
+                    ((TextBox)c).Clear();
+                }
+                else if (c is ComboBox)
+                {
+                    ((ComboBox)c).SelectedIndex = -1;
+                    ((ComboBox)c).Text = string.Empty;
+                }
+                else if (c.HasChildren)
+                {
+                    mtdLimpiarTextBoxes(c);
+                }
+            }
+        }
+
         private void FormPrimerParcial_Load(object sender, EventArgs e)
         {
             MtdMostrarEmp();
@@ -85,6 +105,30 @@ namespace CapaPresentacion
             {
                 MessageBox.Show(ex.StackTrace, "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                int codigo = int.Parse(txtID.Text);
+                int vCantidadRegistros = cdEmpleados.CP_mtdEliminarEmp(codigo);
+                MtdMostrarEmp();
+                MessageBox.Show("Registro Eliminado!!", "Correcto!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("No se encontró codigo!!", "Error eliminacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            mtdLimpiarTextBoxes(this);
         }
     }
 }
