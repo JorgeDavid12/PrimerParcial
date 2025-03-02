@@ -57,6 +57,7 @@
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dgvEmpleado = new System.Windows.Forms.DataGridView();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.groupEstudiante.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleado)).BeginInit();
             this.SuspendLayout();
@@ -291,7 +292,7 @@
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpiar.Image")));
-            this.btnLimpiar.Location = new System.Drawing.Point(1047, 271);
+            this.btnLimpiar.Location = new System.Drawing.Point(911, 271);
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(79, 47);
@@ -308,7 +309,7 @@
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(755, 277);
+            this.btnEliminar.Location = new System.Drawing.Point(619, 277);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(267, 39);
@@ -326,7 +327,7 @@
             this.btnActualizar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnActualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizar.Image")));
             this.btnActualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnActualizar.Location = new System.Drawing.Point(456, 277);
+            this.btnActualizar.Location = new System.Drawing.Point(320, 277);
             this.btnActualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(267, 39);
@@ -344,7 +345,7 @@
             this.btnAgregar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(147, 277);
+            this.btnAgregar.Location = new System.Drawing.Point(55, 279);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(267, 39);
@@ -398,12 +399,31 @@
             this.dgvEmpleado.TabIndex = 192;
             this.dgvEmpleado.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpleado_CellClick);
             // 
+            // btnSalir
+            // 
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Font = new System.Drawing.Font("Lucida Console", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
+            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalir.Location = new System.Drawing.Point(1035, 279);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(267, 39);
+            this.btnSalir.TabIndex = 198;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // FormPrimerParcial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(1325, 644);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.groupEstudiante);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnEliminar);
@@ -447,6 +467,7 @@
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.DataGridView dgvEmpleado;
+        private System.Windows.Forms.Button btnSalir;
     }
 }
 
