@@ -11,5 +11,20 @@ namespace CapaDatos
 {
     public class Conexion
     {
+        private SqlConnection db_conexion = new SqlConnection("Data Source=LAPTOP-86QD1T5A\\SQLEXPRESS;Initial Catalog=db_universidad;Integrated Security=True;Encrypt=False");
+
+        public SqlConnection MtdAbrirConexion()
+        {
+            if (db_conexion.State == ConnectionState.Closed)
+                db_conexion.Open();
+            return db_conexion;
+        }
+
+        public SqlConnection MtdCerrarConexion()
+        {
+            if (db_conexion.State == ConnectionState.Closed)
+                db_conexion.Close();
+            return db_conexion;
+        }
     }
 }
