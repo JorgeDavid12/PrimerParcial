@@ -22,26 +22,26 @@ namespace CapaDatos
             return dtMostrarEmp;
         }
 
-        //public void CP_mtdAgregarEstu(string Nombre, string Apellido, DateTime FechaNaci, DateTime FechaIns, int CarreraID, string Direccion, string Telefono, string Estado)
-        //{
+        public void CP_mtdAgregarEmp(string Nombre, string Apellido, DateTime FechaNacimiento, DateTime FechaContratacion, int DepartamentoID, string PuestoTrabajo, decimal Salario, string Estado)
+        {
 
-        //    string Usp_crear = "uspInserEstudiantes";
-        //    SqlCommand cmd_InsertarEstu = new SqlCommand(Usp_crear, conexion.MtdAbrirConexion());
-        //    cmd_InsertarEstu.CommandType = CommandType.StoredProcedure;
+            string Usp_crear = "uspInsertEmpleados";
+            SqlCommand cmd_InsertarEmp = new SqlCommand(Usp_crear, conexion.MtdAbrirConexion());
+            cmd_InsertarEmp.CommandType = CommandType.StoredProcedure;
 
-        //    cmd_InsertarEstu.Parameters.AddWithValue("@Nombre", Nombre);
-        //    cmd_InsertarEstu.Parameters.AddWithValue("@Apellido", Apellido);
-        //    cmd_InsertarEstu.Parameters.AddWithValue("@FechaNacimiento", FechaNaci.Date);
-        //    cmd_InsertarEstu.Parameters.AddWithValue("@FechaInscripcion", FechaIns.Date);
-        //    cmd_InsertarEstu.Parameters.AddWithValue("@CarreraID", CarreraID);
-        //    cmd_InsertarEstu.Parameters.AddWithValue("@Direccion", Direccion);
-        //    cmd_InsertarEstu.Parameters.AddWithValue("@Telefono", Telefono);
-        //    cmd_InsertarEstu.Parameters.AddWithValue("@Estado", Estado);
-        //    cmd_InsertarEstu.ExecuteNonQuery();
+            cmd_InsertarEmp.Parameters.AddWithValue("@Nombre", Nombre);
+            cmd_InsertarEmp.Parameters.AddWithValue("@Apellido", Apellido);
+            cmd_InsertarEmp.Parameters.AddWithValue("@FechaNacimiento", FechaNacimiento.Date);
+            cmd_InsertarEmp.Parameters.AddWithValue("@FechaContratacion", FechaContratacion.Date);
+            cmd_InsertarEmp.Parameters.AddWithValue("@DepartamentoID", DepartamentoID);
+            cmd_InsertarEmp.Parameters.AddWithValue("@PuestoTrabajo", PuestoTrabajo);
+            cmd_InsertarEmp.Parameters.AddWithValue("@Salario", Salario);
+            cmd_InsertarEmp.Parameters.AddWithValue("@Estado", Estado);
+            cmd_InsertarEmp.ExecuteNonQuery();
 
-        //    conexion.MtdCerrarConexion();
+            conexion.MtdCerrarConexion();
 
-        //}
+        }
 
         //public int CP_mtdActualizarEs(int EstudianteID, string Nombre, string Apellido, DateTime FechaNaci, DateTime FechaIns, int CarreraID, string Direccion, string Telefono, string Estado)
         //{
