@@ -29,26 +29,26 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrimerParcial));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupEstudiante = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtFecNac = new System.Windows.Forms.TextBox();
             this.cmbEstado = new System.Windows.Forms.ComboBox();
-            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.txtPuestoTra = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.txtSalario = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtCarrearID = new System.Windows.Forms.TextBox();
-            this.txtFecInc = new System.Windows.Forms.TextBox();
+            this.txtDepartamentoID = new System.Windows.Forms.TextBox();
+            this.txtFechContratacion = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -56,9 +56,9 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.dgvVehiculos = new System.Windows.Forms.DataGridView();
+            this.dgvEmpleado = new System.Windows.Forms.DataGridView();
             this.groupEstudiante.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVehiculos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleado)).BeginInit();
             this.SuspendLayout();
             // 
             // groupEstudiante
@@ -66,25 +66,25 @@
             this.groupEstudiante.Controls.Add(this.label1);
             this.groupEstudiante.Controls.Add(this.txtFecNac);
             this.groupEstudiante.Controls.Add(this.cmbEstado);
-            this.groupEstudiante.Controls.Add(this.txtDireccion);
+            this.groupEstudiante.Controls.Add(this.txtPuestoTra);
             this.groupEstudiante.Controls.Add(this.label2);
             this.groupEstudiante.Controls.Add(this.label7);
             this.groupEstudiante.Controls.Add(this.txtID);
             this.groupEstudiante.Controls.Add(this.label3);
             this.groupEstudiante.Controls.Add(this.label8);
             this.groupEstudiante.Controls.Add(this.label4);
-            this.groupEstudiante.Controls.Add(this.txtTelefono);
+            this.groupEstudiante.Controls.Add(this.txtSalario);
             this.groupEstudiante.Controls.Add(this.txtApellido);
             this.groupEstudiante.Controls.Add(this.label10);
             this.groupEstudiante.Controls.Add(this.label5);
-            this.groupEstudiante.Controls.Add(this.txtCarrearID);
-            this.groupEstudiante.Controls.Add(this.txtFecInc);
+            this.groupEstudiante.Controls.Add(this.txtDepartamentoID);
+            this.groupEstudiante.Controls.Add(this.txtFechContratacion);
             this.groupEstudiante.Controls.Add(this.label6);
             this.groupEstudiante.Controls.Add(this.label9);
             this.groupEstudiante.Controls.Add(this.txtNombre);
             this.groupEstudiante.Location = new System.Drawing.Point(19, 20);
             this.groupEstudiante.Name = "groupEstudiante";
-            this.groupEstudiante.Size = new System.Drawing.Size(1219, 240);
+            this.groupEstudiante.Size = new System.Drawing.Size(1294, 240);
             this.groupEstudiante.TabIndex = 197;
             this.groupEstudiante.TabStop = false;
             this.groupEstudiante.Text = "groupBox1";
@@ -94,16 +94,16 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Lucida Console", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(386, 18);
+            this.label1.Location = new System.Drawing.Point(502, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(332, 50);
+            this.label1.Size = new System.Drawing.Size(270, 50);
             this.label1.TabIndex = 166;
-            this.label1.Text = "Estudiante";
+            this.label1.Text = "Empleado";
             // 
             // txtFecNac
             // 
             this.txtFecNac.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold);
-            this.txtFecNac.Location = new System.Drawing.Point(602, 86);
+            this.txtFecNac.Location = new System.Drawing.Point(612, 86);
             this.txtFecNac.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFecNac.Name = "txtFecNac";
             this.txtFecNac.Size = new System.Drawing.Size(199, 27);
@@ -116,19 +116,19 @@
             this.cmbEstado.Items.AddRange(new object[] {
             "Disponible",
             "Agotado"});
-            this.cmbEstado.Location = new System.Drawing.Point(996, 151);
+            this.cmbEstado.Location = new System.Drawing.Point(1043, 151);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(199, 28);
             this.cmbEstado.TabIndex = 187;
             // 
-            // txtDireccion
+            // txtPuestoTra
             // 
-            this.txtDireccion.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold);
-            this.txtDireccion.Location = new System.Drawing.Point(996, 86);
-            this.txtDireccion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(199, 27);
-            this.txtDireccion.TabIndex = 189;
+            this.txtPuestoTra.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold);
+            this.txtPuestoTra.Location = new System.Drawing.Point(1043, 86);
+            this.txtPuestoTra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPuestoTra.Name = "txtPuestoTra";
+            this.txtPuestoTra.Size = new System.Drawing.Size(199, 27);
+            this.txtPuestoTra.TabIndex = 189;
             // 
             // label2
             // 
@@ -179,9 +179,9 @@
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(834, 93);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(139, 20);
+            this.label8.Size = new System.Drawing.Size(191, 20);
             this.label8.TabIndex = 186;
-            this.label8.Text = "Direccion:";
+            this.label8.Text = "PuestoTrabajo:";
             // 
             // label4
             // 
@@ -194,14 +194,14 @@
             this.label4.TabIndex = 175;
             this.label4.Text = "Apellido";
             // 
-            // txtTelefono
+            // txtSalario
             // 
-            this.txtTelefono.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold);
-            this.txtTelefono.Location = new System.Drawing.Point(996, 119);
-            this.txtTelefono.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(199, 27);
-            this.txtTelefono.TabIndex = 185;
+            this.txtSalario.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold);
+            this.txtSalario.Location = new System.Drawing.Point(1043, 119);
+            this.txtSalario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSalario.Name = "txtSalario";
+            this.txtSalario.Size = new System.Drawing.Size(199, 27);
+            this.txtSalario.TabIndex = 185;
             // 
             // txtApellido
             // 
@@ -219,9 +219,9 @@
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(834, 124);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(126, 20);
+            this.label10.Size = new System.Drawing.Size(113, 20);
             this.label10.TabIndex = 184;
-            this.label10.Text = "Telefono:";
+            this.label10.Text = "Salario:";
             // 
             // label5
             // 
@@ -230,27 +230,27 @@
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(362, 124);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(204, 20);
+            this.label5.Size = new System.Drawing.Size(217, 20);
             this.label5.TabIndex = 177;
-            this.label5.Text = "FecInscripcion:";
+            this.label5.Text = "FecContratacion:";
             // 
-            // txtCarrearID
+            // txtDepartamentoID
             // 
-            this.txtCarrearID.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold);
-            this.txtCarrearID.Location = new System.Drawing.Point(602, 152);
-            this.txtCarrearID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtCarrearID.Name = "txtCarrearID";
-            this.txtCarrearID.Size = new System.Drawing.Size(199, 27);
-            this.txtCarrearID.TabIndex = 183;
+            this.txtDepartamentoID.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold);
+            this.txtDepartamentoID.Location = new System.Drawing.Point(612, 152);
+            this.txtDepartamentoID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDepartamentoID.Name = "txtDepartamentoID";
+            this.txtDepartamentoID.Size = new System.Drawing.Size(199, 27);
+            this.txtDepartamentoID.TabIndex = 183;
             // 
-            // txtFecInc
+            // txtFechContratacion
             // 
-            this.txtFecInc.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold);
-            this.txtFecInc.Location = new System.Drawing.Point(602, 119);
-            this.txtFecInc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtFecInc.Name = "txtFecInc";
-            this.txtFecInc.Size = new System.Drawing.Size(199, 27);
-            this.txtFecInc.TabIndex = 178;
+            this.txtFechContratacion.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold);
+            this.txtFechContratacion.Location = new System.Drawing.Point(612, 119);
+            this.txtFechContratacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtFechContratacion.Name = "txtFechContratacion";
+            this.txtFechContratacion.Size = new System.Drawing.Size(199, 27);
+            this.txtFechContratacion.TabIndex = 178;
             // 
             // label6
             // 
@@ -259,9 +259,9 @@
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(362, 159);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(126, 20);
+            this.label6.Size = new System.Drawing.Size(191, 20);
             this.label6.TabIndex = 182;
-            this.label6.Text = "CarreraID";
+            this.label6.Text = "DepartamentoID";
             // 
             // label9
             // 
@@ -349,67 +349,68 @@
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             // 
-            // dgvVehiculos
+            // dgvEmpleado
             // 
-            this.dgvVehiculos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvVehiculos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvVehiculos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvVehiculos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.dgvVehiculos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvVehiculos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvVehiculos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvVehiculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVehiculos.EnableHeadersVisualStyles = false;
-            this.dgvVehiculos.GridColor = System.Drawing.Color.DimGray;
-            this.dgvVehiculos.Location = new System.Drawing.Point(72, 341);
-            this.dgvVehiculos.Margin = new System.Windows.Forms.Padding(0);
-            this.dgvVehiculos.Name = "dgvVehiculos";
-            this.dgvVehiculos.ReadOnly = true;
-            this.dgvVehiculos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvVehiculos.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvVehiculos.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvVehiculos.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvVehiculos.RowTemplate.Height = 24;
-            this.dgvVehiculos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvVehiculos.Size = new System.Drawing.Size(1114, 283);
-            this.dgvVehiculos.TabIndex = 192;
+            this.dgvEmpleado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvEmpleado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvEmpleado.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvEmpleado.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.dgvEmpleado.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvEmpleado.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEmpleado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEmpleado.EnableHeadersVisualStyles = false;
+            this.dgvEmpleado.GridColor = System.Drawing.Color.DimGray;
+            this.dgvEmpleado.Location = new System.Drawing.Point(72, 341);
+            this.dgvEmpleado.Margin = new System.Windows.Forms.Padding(0);
+            this.dgvEmpleado.Name = "dgvEmpleado";
+            this.dgvEmpleado.ReadOnly = true;
+            this.dgvEmpleado.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEmpleado.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvEmpleado.RowHeadersWidth = 51;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvEmpleado.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            this.dgvEmpleado.RowTemplate.Height = 24;
+            this.dgvEmpleado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvEmpleado.Size = new System.Drawing.Size(1183, 283);
+            this.dgvEmpleado.TabIndex = 192;
             // 
             // FormPrimerParcial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(1256, 644);
+            this.ClientSize = new System.Drawing.Size(1325, 644);
             this.Controls.Add(this.groupEstudiante);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.dgvVehiculos);
+            this.Controls.Add(this.dgvEmpleado);
             this.Name = "FormPrimerParcial";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FormPrimerParcial_Load);
             this.groupEstudiante.ResumeLayout(false);
             this.groupEstudiante.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVehiculos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleado)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -420,19 +421,19 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtFecNac;
         private System.Windows.Forms.ComboBox cmbEstado;
-        private System.Windows.Forms.TextBox txtDireccion;
+        private System.Windows.Forms.TextBox txtPuestoTra;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtTelefono;
+        private System.Windows.Forms.TextBox txtSalario;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtCarrearID;
-        private System.Windows.Forms.TextBox txtFecInc;
+        private System.Windows.Forms.TextBox txtDepartamentoID;
+        private System.Windows.Forms.TextBox txtFechContratacion;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtNombre;
@@ -440,7 +441,7 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.DataGridView dgvVehiculos;
+        private System.Windows.Forms.DataGridView dgvEmpleado;
     }
 }
 

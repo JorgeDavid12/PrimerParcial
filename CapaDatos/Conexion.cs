@@ -11,7 +11,7 @@ namespace CapaDatos
 {
     public class Conexion
     {
-        private SqlConnection db_conexion = new SqlConnection("Data Source=LAPTOP-86QD1T5A\\SQLEXPRESS;Initial Catalog=db_universidad;Integrated Security=True;Encrypt=False");
+        private SqlConnection db_conexion = new SqlConnection("Data Source=LAPTOP-86QD1T5A\\SQLEXPRESS;Initial Catalog=db_planilla;Integrated Security=True;Encrypt=False");
 
         public SqlConnection MtdAbrirConexion()
         {
