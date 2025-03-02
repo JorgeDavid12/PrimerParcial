@@ -43,29 +43,29 @@ namespace CapaDatos
 
         }
 
-        //public int CP_mtdActualizarEs(int EstudianteID, string Nombre, string Apellido, DateTime FechaNaci, DateTime FechaIns, int CarreraID, string Direccion, string Telefono, string Estado)
-        //{
-        //    int vContarRegistrosAfectados = 0;
+        public int CP_mtdActualizarEmp(int EmpleadoID, string Nombre, string Apellido, DateTime FechaNacimiento, DateTime FechaContratacion, int DepartamentoID, string PuestoTrabajo, decimal Salario, string Estado)
+        {
+            int vContarRegistrosAfectados = 0;
 
-        //    string vUspActualizarEs = "uspUpdateEstudiante";
-        //    SqlCommand commActualizarEstu = new SqlCommand(vUspActualizarEs, conexion.MtdAbrirConexion());
-        //    commActualizarEstu.CommandType = CommandType.StoredProcedure;
+            string vUspActualizarEmp = "uspUpdateEmpleados";
+            SqlCommand commActualizarEmp = new SqlCommand(vUspActualizarEmp, conexion.MtdAbrirConexion());
+            commActualizarEmp.CommandType = CommandType.StoredProcedure;
 
-        //    commActualizarEstu.Parameters.AddWithValue("@EstudianteID", EstudianteID);
-        //    commActualizarEstu.Parameters.AddWithValue("@Nombre", Nombre);
-        //    commActualizarEstu.Parameters.AddWithValue("@Apellido", Apellido);
-        //    commActualizarEstu.Parameters.AddWithValue("@FechaNacimiento", FechaNaci.Date);
-        //    commActualizarEstu.Parameters.AddWithValue("@FechaInscripcion", FechaIns.Date);
-        //    commActualizarEstu.Parameters.AddWithValue("@CarreraID", CarreraID);
-        //    commActualizarEstu.Parameters.AddWithValue("@Direccion", Direccion);
-        //    commActualizarEstu.Parameters.AddWithValue("@Telefono", Telefono);
-        //    commActualizarEstu.Parameters.AddWithValue("@Estado", Estado);
+            commActualizarEmp.Parameters.AddWithValue("@EmpleadoID", EmpleadoID);
+            commActualizarEmp.Parameters.AddWithValue("@Nombre", Nombre);
+            commActualizarEmp.Parameters.AddWithValue("@Apellido", Apellido);
+            commActualizarEmp.Parameters.AddWithValue("@FechaNacimiento", FechaNacimiento.Date);
+            commActualizarEmp.Parameters.AddWithValue("@FechaContratacion", FechaContratacion.Date);
+            commActualizarEmp.Parameters.AddWithValue("@DepartamentoID", DepartamentoID);
+            commActualizarEmp.Parameters.AddWithValue("@PuestoTrabajo", PuestoTrabajo);
+            commActualizarEmp.Parameters.AddWithValue("@Salario", Salario);
+            commActualizarEmp.Parameters.AddWithValue("@Estado", Estado);
 
-        //    vContarRegistrosAfectados = commActualizarEstu.ExecuteNonQuery();
+            vContarRegistrosAfectados = commActualizarEmp.ExecuteNonQuery();
 
-        //    conexion.MtdCerrarConexion();
-        //    return vContarRegistrosAfectados;
-        //}
+            conexion.MtdCerrarConexion();
+            return vContarRegistrosAfectados;
+        }
 
         //public int CP_mtdEliminarEs(int codigo)
         //{

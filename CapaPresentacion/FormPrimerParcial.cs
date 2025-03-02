@@ -60,5 +60,31 @@ namespace CapaPresentacion
             txtSalario.Text = dgvEmpleado.SelectedCells[7].Value.ToString();
             cmbEstado.Text = dgvEmpleado.SelectedCells[8].Value.ToString();
         }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                int codigo = int.Parse(txtID.Text);
+                string nombre = txtNombre.Text;
+                string apellido = txtApellido.Text;
+                DateTime fechaNac = DateTime.Parse(txtFecNac.Text);
+                DateTime fechaCon = DateTime.Parse(txtFechContratacion.Text);
+                int DepartamentoID = int.Parse(txtDepartamentoID.Text);
+                string PuestoTra = txtPuestoTra.Text;
+                decimal Salario = decimal.Parse(txtSalario.Text);
+                string estado = cmbEstado.Text;
+
+                int vCantidadRegistros = cdEmpleados.CP_mtdActualizarEmp(codigo, nombre, apellido, fechaNac, fechaCon, DepartamentoID, PuestoTra, Salario, estado);
+                MtdMostrarEmp();
+                MessageBox.Show("El empleado se actualizo con exito", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace, "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
